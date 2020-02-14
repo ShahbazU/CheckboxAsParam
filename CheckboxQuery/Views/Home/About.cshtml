@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+<script type="text/javascript">
+    function makeRedirection(){
+    window.location.href = window.location.href.replace("About", "Index") + '?chk=' + $('#chkQuery').is(":checked");
+    }
+</script>
+<div class="row">
+    <div class="col-md-12">
+        <input type="checkbox" id="chkQuery" />
+        <input type="button" value="Redirect" class="btn btn-default" onclick="makeRedirection()" />
+    </div>
+</div>

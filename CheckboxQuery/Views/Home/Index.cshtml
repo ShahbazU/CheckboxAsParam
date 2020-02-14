@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script type="text/javascript">
+    $(function () {
+        $("#Button1").click(function () {
+            debugger;
+            window.open('../Home/Contact?ParamName=' + ($("#cbxUrlParam").is(":checked")), '_blank');
+        });
+    });
+    //function makeRedirection(){
+
+    //debugger;
+    //window.location.href = window.location.href.replace("Index", "About") + '?chk=' + $('#chkQuery').is(":checked");
+
+    //}
+</script>
+<div class="row">
+    <div class="col-md-12">
+        <input type="checkbox" id="cbxUrlParam" />
+        <button type="button" id="Button1" name="Button">Button</button>
+    </div>
+    @*<div class="col-md-12">
+        <input type="checkbox" id="chkQuery" />
+        <input type="button" value="Redirect" class="btn btn-default" onclick="makeRedirection()" />
+    </div>*@
+</div>
